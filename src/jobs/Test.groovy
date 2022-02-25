@@ -3,7 +3,7 @@ job('DSL-DXL') {
         git('https://github.com/AhmedAlaaPhil/JenTest.git')
     }
     triggers {
-        scm('H/01 * * * *')
+        scm('H/15 * * * *')
     }
     steps {
         maven('-e clean test')
