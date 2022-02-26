@@ -1,4 +1,6 @@
-job('DSL-DXL') {
+job('DSL-DXL-GitHub-file') {
+
+    description 'A very simple demo for the Jenkins Job DSL'
     scm {
         git('https://github.com/AhmedAlaaPhil/JenTest.git')
     }
@@ -7,5 +9,8 @@ job('DSL-DXL') {
     }
     steps {
         maven('-e clean test')
+    }
+    publishers {
+        archiveTestNG('**/testng-results.xml')
     }
 }
